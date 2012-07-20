@@ -12,7 +12,7 @@
       defaults = {
         previousElementSelector: ".previous",
         nextElementSelector: ".next",
-        disabledStateClassName: "disabled"
+        disabledStateClassName: "disable"
       };
 
   function FlexsliderManualDirectionControls( element, options ) {
