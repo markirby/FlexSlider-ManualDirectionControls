@@ -19,13 +19,15 @@ This plugin allows you to easily replace the existing navigation with a single l
 * Set the option 'directionNav' to false to disable the default navigation
 * Append the flexsliderManualDirectionControls() command
 
+Example:
+
     $('.flexslider').flexslider({
         directionNav: false
     }).flexsliderManualDirectionControls();
 
 ## Navigation disable feature
 
-* If flexslider has animationLoop set to false, a class of disable will be applied to the elements if they cannot be used to go any further
+If flexslider has animationLoop set to false, a class of disable will be applied to the elements if they cannot be used to go any further
 
     $('.flexslider').flexslider({
         directionNav: false,
