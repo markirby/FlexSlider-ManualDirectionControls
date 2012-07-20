@@ -37,20 +37,27 @@
   
   FlexsliderManualDirectionControls.prototype.addEventListeners = function() {
     
-    $(this.element).find(this.options.previousElementSelector).bind('click.flexsliderPromo', {self:this}, function(event) {
-      event.data.self.goToTargetInDirection('prev');
-
+    $(this.element).find(this.options.previousElementSelector).bind('touchstart.flexsliderPromo click.flexsliderPromo', {self:this}, function(event) {
       event.stopPropagation();
       event.preventDefault();
+      
+      if (!event.handled) {
+        event.data.self.goToTargetInDirection('prev');
+        event.handled = true;
+      }
       
     });
 
     $(this.element).find(this.options.nextElementSelector).bind('click.flexsliderPromo', {self:this}, function(event) {
-      event.data.self.goToTargetInDirection('next');
 
       event.stopPropagation();
       event.preventDefault();
-      
+
+      if (!event.handled) {
+        event.data.self.goToTargetInDirection('next');
+        event.handled = true;
+      }
+
     });
     
   };
