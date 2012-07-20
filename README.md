@@ -25,6 +25,27 @@ Example:
         directionNav: false
     }).flexsliderManualDirectionControls();
 
+Inside your code, you will need to add your navigation, and this must be within the .flexslider child elements, e.g.:
+
+	<section class="flexslider">
+		<a class="previous disabled" href="#"><img src="images/back-arrow-white.png" alt="previous" width="11" height="18" /></a>
+		<a class="next" href="#"><img src="images/forward-arrow-white.png" alt="next" width="11" height="18" /></a>
+		<ul class="slides">
+			<li>
+				<img src="images/placeholder-module.jpg" alt="placeholder-module" />
+				<h2>One</h2>
+			</li>
+			<li>
+				<img src="images/placeholder-module.jpg" alt="placeholder-module" />
+				<h2>Two</h2>
+			</li>
+			<li>
+				<img src="images/placeholder-module.jpg" alt="placeholder-module" />
+				<h2>Three</h2>
+			</li>
+		</ul>
+	</section>
+
 ## Navigation disable feature
 
 If flexslider has animationLoop set to false, a class of disable will be applied to the elements if they cannot be used to go any further
